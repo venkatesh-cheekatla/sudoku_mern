@@ -14,7 +14,11 @@ const app = express()
 
 app.use(bodyParser.urlencoded({extended: true, limit: "32mb"}))
 app.use(bodyParser.json({extended: true, limit: "32mb"}))
-app.use(cors())
+app.use(cors(
+    origin: [""],
+    methods:["POST","GET"],
+    credentials:true
+))
 
 app.use('/api/v1/game', gameRouter)
 app.use('/api/v1/auth', userAuthRouter)
