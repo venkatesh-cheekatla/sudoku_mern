@@ -15,7 +15,7 @@ const app = express()
 app.use(bodyParser.urlencoded({extended: true, limit: "32mb"}))
 app.use(bodyParser.json({extended: true, limit: "32mb"}))
 app.use(cors(
-    origin: [""],
+    origin: ["https://sudoku-mern-game.vercel.app/"],
     methods:["POST","GET"],
     credentials:true
 ))
